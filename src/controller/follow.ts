@@ -51,7 +51,7 @@ export const getFollowers = async (req: Request, res: Response) => {
       res.json({
          success: true,
          message: "success",
-         data: followers,
+         data: followers ? true : false
       });
    } catch (error) {
       const err = error as Error;
